@@ -3,6 +3,7 @@ package com.example.salentro.coinbasewallet;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.coinbase.android.sdk.OAuth;
 import com.coinbase.api.Coinbase;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(final Intent intent) {
+
+        Log.e("Changes", "yess");
+        
         if (intent != null && intent.getAction() != null && intent.getAction().equals("android.intent.action.VIEW")) {
             //new CompleteAuthorizationTask(intent).execute();
         }
